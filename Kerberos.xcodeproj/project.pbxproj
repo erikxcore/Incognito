@@ -37,7 +37,7 @@
 		FC58811A1877610A004469CF /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5881191877610A004469CF /* PlayerController.m */; };
 		FC58811D18776119004469CF /* SaveController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58811C18776119004469CF /* SaveController.m */; };
 		FC58812018776153004469CF /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58811F18776153004469CF /* GameController.m */; };
-		FC5881221877640E004469CF /* kerebos.db in Resources */ = {isa = PBXBuildFile; fileRef = FC5881211877640E004469CF /* kerebos.db */; };
+		FCA370781877677900464FE1 /* kerebos.db in Resources */ = {isa = PBXBuildFile; fileRef = FCA370771877677900464FE1 /* kerebos.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +102,7 @@
 		FC58811C18776119004469CF /* SaveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveController.m; sourceTree = "<group>"; };
 		FC58811E18776153004469CF /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		FC58811F18776153004469CF /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
-		FC5881211877640E004469CF /* kerebos.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = kerebos.db; path = ../../../../kerebos.db; sourceTree = "<group>"; };
+		FCA370771877677900464FE1 /* kerebos.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = kerebos.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +179,7 @@
 		FC5880C0187759F4004469CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FC5881211877640E004469CF /* kerebos.db */,
+				FCA370771877677900464FE1 /* kerebos.db */,
 				FC5880C1187759F4004469CF /* Kerberos-Info.plist */,
 				FC5880C2187759F4004469CF /* InfoPlist.strings */,
 				FC5880C5187759F4004469CF /* main.m */,
@@ -348,7 +348,7 @@
 			files = (
 				FC5880C4187759F4004469CF /* InfoPlist.strings in Resources */,
 				FC5880CC187759F4004469CF /* Images.xcassets in Resources */,
-				FC5881221877640E004469CF /* kerebos.db in Resources */,
+				FCA370781877677900464FE1 /* kerebos.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +592,7 @@
 				FC5880E4187759F5004469CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC5880E5187759F5004469CF /* Build configuration list for PBXNativeTarget "KerberosTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +601,7 @@
 				FC5880E7187759F5004469CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
