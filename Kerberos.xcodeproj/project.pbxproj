@@ -19,6 +19,25 @@
 		FC5880D5187759F5004469CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5880BD187759F4004469CF /* UIKit.framework */; };
 		FC5880DD187759F5004469CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC5880DB187759F5004469CF /* InfoPlist.strings */; };
 		FC5880DF187759F5004469CF /* KerberosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5880DE187759F5004469CF /* KerberosTests.m */; };
+		FC5880E918775F12004469CF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5880E818775F12004469CF /* libsqlite3.dylib */; };
+		FC5880EC18775F4F004469CF /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5880EB18775F4F004469CF /* StartScreenViewController.m */; };
+		FC5880EF18775F66004469CF /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5880EE18775F66004469CF /* StoryViewController.m */; };
+		FC5880F218775F9A004469CF /* SceneDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5880F118775F9A004469CF /* SceneDecider.m */; };
+		FC5880F518775FA4004469CF /* SceneDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5880F418775FA4004469CF /* SceneDrawer.m */; };
+		FC5880F818775FB4004469CF /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5880F718775FB4004469CF /* Scene.m */; };
+		FC5880FB18775FBE004469CF /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5880FA18775FBE004469CF /* Start.m */; };
+		FC58810118775FFC004469CF /* DatabaseUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58810018775FFC004469CF /* DatabaseUtility.m */; };
+		FC58810418776019004469CF /* ShootingGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58810318776019004469CF /* ShootingGameViewController.m */; };
+		FC5881071877602A004469CF /* ShootingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5881061877602A004469CF /* ShootingGame.m */; };
+		FC58810B18776090004469CF /* SceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58810A18776090004469CF /* SceneModel.m */; };
+		FC58810E18776099004469CF /* ChoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58810D18776099004469CF /* ChoiceModel.m */; };
+		FC588111187760C5004469CF /* SaveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC588110187760C5004469CF /* SaveModel.m */; };
+		FC588114187760F5004469CF /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC588113187760F5004469CF /* GameModel.m */; };
+		FC588117187760FE004469CF /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC588116187760FE004469CF /* PlayerModel.m */; };
+		FC58811A1877610A004469CF /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5881191877610A004469CF /* PlayerController.m */; };
+		FC58811D18776119004469CF /* SaveController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58811C18776119004469CF /* SaveController.m */; };
+		FC58812018776153004469CF /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58811F18776153004469CF /* GameController.m */; };
+		FC5881221877640E004469CF /* kerebos.db in Resources */ = {isa = PBXBuildFile; fileRef = FC5881211877640E004469CF /* kerebos.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +67,42 @@
 		FC5880DA187759F5004469CF /* KerberosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KerberosTests-Info.plist"; sourceTree = "<group>"; };
 		FC5880DC187759F5004469CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FC5880DE187759F5004469CF /* KerberosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KerberosTests.m; sourceTree = "<group>"; };
+		FC5880E818775F12004469CF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		FC5880EA18775F4F004469CF /* StartScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenViewController.h; sourceTree = "<group>"; };
+		FC5880EB18775F4F004469CF /* StartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
+		FC5880ED18775F66004469CF /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
+		FC5880EE18775F66004469CF /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
+		FC5880F018775F9A004469CF /* SceneDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDecider.h; sourceTree = "<group>"; };
+		FC5880F118775F9A004469CF /* SceneDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDecider.m; sourceTree = "<group>"; };
+		FC5880F318775FA4004469CF /* SceneDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDrawer.h; sourceTree = "<group>"; };
+		FC5880F418775FA4004469CF /* SceneDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDrawer.m; sourceTree = "<group>"; };
+		FC5880F618775FB4004469CF /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		FC5880F718775FB4004469CF /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		FC5880F918775FBE004469CF /* Start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Start.h; sourceTree = "<group>"; };
+		FC5880FA18775FBE004469CF /* Start.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Start.m; sourceTree = "<group>"; };
+		FC5880FF18775FFC004469CF /* DatabaseUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseUtility.h; sourceTree = "<group>"; };
+		FC58810018775FFC004469CF /* DatabaseUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseUtility.m; sourceTree = "<group>"; };
+		FC58810218776019004469CF /* ShootingGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShootingGameViewController.h; sourceTree = "<group>"; };
+		FC58810318776019004469CF /* ShootingGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShootingGameViewController.m; sourceTree = "<group>"; };
+		FC5881051877602A004469CF /* ShootingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShootingGame.h; sourceTree = "<group>"; };
+		FC5881061877602A004469CF /* ShootingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShootingGame.m; sourceTree = "<group>"; };
+		FC58810918776090004469CF /* SceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneModel.h; sourceTree = "<group>"; };
+		FC58810A18776090004469CF /* SceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneModel.m; sourceTree = "<group>"; };
+		FC58810C18776099004469CF /* ChoiceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceModel.h; sourceTree = "<group>"; };
+		FC58810D18776099004469CF /* ChoiceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceModel.m; sourceTree = "<group>"; };
+		FC58810F187760C5004469CF /* SaveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveModel.h; sourceTree = "<group>"; };
+		FC588110187760C5004469CF /* SaveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveModel.m; sourceTree = "<group>"; };
+		FC588112187760F5004469CF /* GameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModel.h; sourceTree = "<group>"; };
+		FC588113187760F5004469CF /* GameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
+		FC588115187760FE004469CF /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerModel.h; sourceTree = "<group>"; };
+		FC588116187760FE004469CF /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerModel.m; sourceTree = "<group>"; };
+		FC5881181877610A004469CF /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
+		FC5881191877610A004469CF /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerController.m; sourceTree = "<group>"; };
+		FC58811B18776119004469CF /* SaveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveController.h; sourceTree = "<group>"; };
+		FC58811C18776119004469CF /* SaveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveController.m; sourceTree = "<group>"; };
+		FC58811E18776153004469CF /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		FC58811F18776153004469CF /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		FC5881211877640E004469CF /* kerebos.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = kerebos.db; path = ../../../../kerebos.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5880E918775F12004469CF /* libsqlite3.dylib in Frameworks */,
 				FC5880BC187759F4004469CF /* CoreGraphics.framework in Frameworks */,
 				FC5880BE187759F4004469CF /* UIKit.framework in Frameworks */,
 				FC5880BA187759F4004469CF /* Foundation.framework in Frameworks */,
@@ -96,6 +152,7 @@
 		FC5880B8187759F4004469CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC5880E818775F12004469CF /* libsqlite3.dylib */,
 				FC5880B9187759F4004469CF /* Foundation.framework */,
 				FC5880BB187759F4004469CF /* CoreGraphics.framework */,
 				FC5880BD187759F4004469CF /* UIKit.framework */,
@@ -107,8 +164,12 @@
 		FC5880BF187759F4004469CF /* Kerberos */ = {
 			isa = PBXGroup;
 			children = (
-				FC5880C8187759F4004469CF /* AppDelegate.h */,
+				FC58810818776078004469CF /* Models */,
+				FC5880FD18775FCC004469CF /* Controllers */,
+				FC5880FC18775FC2004469CF /* Views */,
+				FC5880FE18775FE3004469CF /* Utilities */,
 				FC5880C9187759F4004469CF /* AppDelegate.m */,
+				FC5880C8187759F4004469CF /* AppDelegate.h */,
 				FC5880CB187759F4004469CF /* Images.xcassets */,
 				FC5880C0187759F4004469CF /* Supporting Files */,
 			);
@@ -118,6 +179,7 @@
 		FC5880C0187759F4004469CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC5881211877640E004469CF /* kerebos.db */,
 				FC5880C1187759F4004469CF /* Kerberos-Info.plist */,
 				FC5880C2187759F4004469CF /* InfoPlist.strings */,
 				FC5880C5187759F4004469CF /* main.m */,
@@ -142,6 +204,68 @@
 				FC5880DB187759F5004469CF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC5880FC18775FC2004469CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC5880F618775FB4004469CF /* Scene.h */,
+				FC5880F718775FB4004469CF /* Scene.m */,
+				FC5880F918775FBE004469CF /* Start.h */,
+				FC5880FA18775FBE004469CF /* Start.m */,
+				FC5881051877602A004469CF /* ShootingGame.h */,
+				FC5881061877602A004469CF /* ShootingGame.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FC5880FD18775FCC004469CF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC5880EA18775F4F004469CF /* StartScreenViewController.h */,
+				FC5880EB18775F4F004469CF /* StartScreenViewController.m */,
+				FC5880ED18775F66004469CF /* StoryViewController.h */,
+				FC5880EE18775F66004469CF /* StoryViewController.m */,
+				FC58810218776019004469CF /* ShootingGameViewController.h */,
+				FC58810318776019004469CF /* ShootingGameViewController.m */,
+				FC5881181877610A004469CF /* PlayerController.h */,
+				FC5881191877610A004469CF /* PlayerController.m */,
+				FC58811B18776119004469CF /* SaveController.h */,
+				FC58811C18776119004469CF /* SaveController.m */,
+				FC58811E18776153004469CF /* GameController.h */,
+				FC58811F18776153004469CF /* GameController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FC5880FE18775FE3004469CF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FC5880F018775F9A004469CF /* SceneDecider.h */,
+				FC5880F118775F9A004469CF /* SceneDecider.m */,
+				FC5880F318775FA4004469CF /* SceneDrawer.h */,
+				FC5880F418775FA4004469CF /* SceneDrawer.m */,
+				FC5880FF18775FFC004469CF /* DatabaseUtility.h */,
+				FC58810018775FFC004469CF /* DatabaseUtility.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		FC58810818776078004469CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC58810918776090004469CF /* SceneModel.h */,
+				FC58810A18776090004469CF /* SceneModel.m */,
+				FC58810C18776099004469CF /* ChoiceModel.h */,
+				FC58810D18776099004469CF /* ChoiceModel.m */,
+				FC58810F187760C5004469CF /* SaveModel.h */,
+				FC588110187760C5004469CF /* SaveModel.m */,
+				FC588112187760F5004469CF /* GameModel.h */,
+				FC588113187760F5004469CF /* GameModel.m */,
+				FC588115187760FE004469CF /* PlayerModel.h */,
+				FC588116187760FE004469CF /* PlayerModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +315,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Eric Barber";
 				TargetAttributes = {
+					FC5880B5187759F4004469CF = {
+						DevelopmentTeam = 6QAYTF27QH;
+					};
 					FC5880D0187759F5004469CF = {
 						TestTargetID = FC5880B5187759F4004469CF;
 					};
@@ -221,6 +348,7 @@
 			files = (
 				FC5880C4187759F4004469CF /* InfoPlist.strings in Resources */,
 				FC5880CC187759F4004469CF /* Images.xcassets in Resources */,
+				FC5881221877640E004469CF /* kerebos.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +367,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5880FB18775FBE004469CF /* Start.m in Sources */,
+				FC5880EF18775F66004469CF /* StoryViewController.m in Sources */,
+				FC588111187760C5004469CF /* SaveModel.m in Sources */,
+				FC58810E18776099004469CF /* ChoiceModel.m in Sources */,
+				FC58811D18776119004469CF /* SaveController.m in Sources */,
 				FC5880CA187759F4004469CF /* AppDelegate.m in Sources */,
+				FC58810118775FFC004469CF /* DatabaseUtility.m in Sources */,
+				FC588117187760FE004469CF /* PlayerModel.m in Sources */,
+				FC5880EC18775F4F004469CF /* StartScreenViewController.m in Sources */,
+				FC588114187760F5004469CF /* GameModel.m in Sources */,
+				FC5881071877602A004469CF /* ShootingGame.m in Sources */,
 				FC5880C6187759F4004469CF /* main.m in Sources */,
+				FC5880F218775F9A004469CF /* SceneDecider.m in Sources */,
+				FC58810418776019004469CF /* ShootingGameViewController.m in Sources */,
+				FC5880F818775FB4004469CF /* Scene.m in Sources */,
+				FC58812018776153004469CF /* GameController.m in Sources */,
+				FC58810B18776090004469CF /* SceneModel.m in Sources */,
+				FC5880F518775FA4004469CF /* SceneDrawer.m in Sources */,
+				FC58811A1877610A004469CF /* PlayerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,10 +504,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kerberos/Kerberos-Prefix.pch";
 				INFOPLIST_FILE = "Kerberos/Kerberos-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -372,10 +520,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kerberos/Kerberos-Prefix.pch";
 				INFOPLIST_FILE = "Kerberos/Kerberos-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
