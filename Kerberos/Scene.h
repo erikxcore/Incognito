@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface Scene : UIView
+
+@property (strong, nonatomic) UIView *view;
+@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UILabel *sceneDescription;
+
+
 
 @end

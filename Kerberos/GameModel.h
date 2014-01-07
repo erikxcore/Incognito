@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface GameModel : NSObject
+//For shooting minigame.
 
 @end

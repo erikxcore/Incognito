@@ -10,5 +10,18 @@
 
 @implementation ChoiceModel
 
+@synthesize buttons, choiceButton, choiceID, choiceText;
+
+- (void) getChoicesForScene{
+    
+}
+
+- (void) setChoicesForButtons{
+    
+}
+
+- (void) createChoiceButton:(NSString *)choiceText choiceID:(NSInteger)choiceID{
+    
+}
 
 @end

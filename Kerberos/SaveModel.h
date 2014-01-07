@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface SaveModel : NSObject
+//For resuming
 
 @end

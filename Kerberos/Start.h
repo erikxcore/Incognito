@@ -10,4 +10,6 @@
 
 @interface Start : UIView
 
+@property (strong, nonatomic) UIView *view;
+
 @end

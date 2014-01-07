@@ -14,11 +14,14 @@
 
 @implementation StartScreenViewController
 
+@synthesize StartButton,ContinueButton;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        DatabaseUtility *databaseUtility = [[DatabaseUtility alloc]init];
     }
     return self;
 }
@@ -35,4 +38,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)startButtonAction:(id)sender {
+}
+
+- (IBAction)continueButtonAction:(id)sender {
+}
+
+- (void) loadNewGame{
+    
+}
+
+- (void) loadView{
+    
+}
+
+- (void) checkSaveGame{
+    
+}
+
+- (void) loadScene:(NSInteger *)sceneID{
+    
+}
 @end

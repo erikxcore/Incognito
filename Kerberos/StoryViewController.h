@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Scene.h"
+#import "SceneModel.h"
+#import "ChoiceModel.h"
 
 @interface StoryViewController : UIViewController
+
+@property (strong, nonatomic) Scene *sceneView;
+@property (strong, nonatomic) ChoiceModel *choices;
 
 @end

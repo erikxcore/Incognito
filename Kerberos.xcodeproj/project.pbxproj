@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0C3E98187C8A2000BFEC9F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3E97187C8A2000BFEC9F /* Storyboard.storyboard */; };
 		FC5880BA187759F4004469CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5880B9187759F4004469CF /* Foundation.framework */; };
 		FC5880BC187759F4004469CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5880BB187759F4004469CF /* CoreGraphics.framework */; };
 		FC5880BE187759F4004469CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5880BD187759F4004469CF /* UIKit.framework */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC0C3E97187C8A2000BFEC9F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Kerberos/Storyboard.storyboard; sourceTree = "<group>"; };
 		FC5880B6187759F4004469CF /* Kerberos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kerberos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5880B9187759F4004469CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC5880BB187759F4004469CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +135,7 @@
 		FC5880AD187759F4004469CF = {
 			isa = PBXGroup;
 			children = (
+				FC0C3E97187C8A2000BFEC9F /* Storyboard.storyboard */,
 				FC5880BF187759F4004469CF /* Kerberos */,
 				FC5880D8187759F5004469CF /* KerberosTests */,
 				FC5880B8187759F4004469CF /* Frameworks */,
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5880C4187759F4004469CF /* InfoPlist.strings in Resources */,
+				FC0C3E98187C8A2000BFEC9F /* Storyboard.storyboard in Resources */,
 				FC5880CC187759F4004469CF /* Images.xcassets in Resources */,
 				FCA370781877677900464FE1 /* kerebos.db in Resources */,
 			);

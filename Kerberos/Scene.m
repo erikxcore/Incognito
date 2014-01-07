@@ -10,6 +10,8 @@
 
 @implementation Scene
 
+@synthesize view,imageView,sceneDescription;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

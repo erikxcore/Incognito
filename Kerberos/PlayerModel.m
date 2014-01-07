@@ -10,4 +10,18 @@
 
 @implementation PlayerModel
 
+@synthesize currentHealth, maxHealth, weaponReady;
+
+- (void) dealtDamage:(NSInteger)damageAmount{
+    [self setCurrentHealth:damageAmount];
+}
+
+- (void) fireAtLocation:(NSInteger)gridNumber{
+    
+}
+
+- (void) readyWeapon{
+    [self setWeaponReady:YES];
+}
+
 @end
