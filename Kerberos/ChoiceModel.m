@@ -10,18 +10,32 @@
 
 @implementation ChoiceModel
 
-@synthesize buttons, choiceButton, choiceID, choiceText;
+@synthesize choiceID = _choiceID;
+@synthesize choiceForScene = _choiceForScene;
+@synthesize choiceNumber = _choiceNumber;
+@synthesize destinationSceneID = _destinationSceneID;
+@synthesize choiceQuickTimeEventType = _choiceQuickTimeEventType;
+@synthesize choiceMinigameType = _choiceMinigameType;
+@synthesize choiceEnding = _choiceEnding;
+@synthesize choiceDescription = _choiceDescription;
 
-- (void) getChoicesForScene{
-    
+-(id)initWithChoiceInformation:(int)choiceID choiceForScene:(int)choiceForScene choiceNumber:(int)choiceNumber destinationSceneId:(int)destinationSceneId choiceQuickTimeEventType:(int)choiceQuickTimeEventType choiceMinigameType:(int)choiceMinigameType choiceEnding:(int)choiceEnding choiceDescription:(NSString *)choiceDescription{
+        if ((self = [super init])) {
+            self.choiceID = choiceID;
+            self.choiceForScene = choiceForScene;
+            self.choiceNumber = choiceNumber;
+            self.destinationSceneID = destinationSceneId;
+            self.choiceQuickTimeEventType = choiceQuickTimeEventType;
+            self.choiceMinigameType = choiceMinigameType;
+            self.choiceEnding = choiceEnding;
+            self.choiceDescription = choiceDescription;
+        }
+    return self;
 }
 
-- (void) setChoicesForButtons{
-    
+-(void) dealloc{
+    self.choiceDescription = nil;
 }
 
-- (void) createChoiceButton:(NSString *)choiceText choiceID:(NSInteger)choiceID{
-    
-}
 
 @end

@@ -1,59 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3PW-Te-Ota">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CVy-cF-t2o">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Start Screen View Controller-->
-        <scene sceneID="MTk-dH-yFl">
+        <!--Start View Controller - StartScreen-->
+        <scene sceneID="04a-gZ-Yq4">
             <objects>
-                <viewController storyboardIdentifier="StartScreen" id="3PW-Te-Ota" customClass="StartScreenViewController" sceneMemberID="viewController">
+                <viewController title="StartScreen" id="CVy-cF-t2o" customClass="StartViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3Nl-6M-bsx"/>
-                        <viewControllerLayoutGuide type="bottom" id="iDx-la-W0S"/>
+                        <viewControllerLayoutGuide type="top" id="FDO-IT-V0I"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2g-wT-Xqu"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xqX-YH-HTg" userLabel="Start Screen View" customClass="Start">
+                    <view key="view" contentMode="scaleToFill" id="FQ5-hz-e1q" customClass="Start">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFr-X8-9H7" userLabel="Continue Button">
-                                <rect key="frame" x="76" y="342" width="169" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="continueButtonAction:" destination="3PW-Te-Ota" eventType="touchUpInside" id="nmv-4C-FcJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4r-xS-MZw" userLabel="Start Story Button">
-                                <rect key="frame" x="76" y="304" width="169" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nk-D5-iyg">
+                                <rect key="frame" x="107" y="351" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startButtonAction:" destination="3PW-Te-Ota" eventType="touchUpInside" id="U29-PJ-FTr"/>
-                                    <segue destination="l56-qY-gjd" kind="push" id="127-Ei-h0k"/>
+                                    <action selector="startButtonAction:" destination="CVy-cF-t2o" eventType="touchUpInside" id="Mon-FQ-vaM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz0-u4-OsS">
+                                <rect key="frame" x="107" y="389" width="149" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonAction:" destination="CVy-cF-t2o" eventType="touchUpInside" id="Uw3-gL-WIl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="ContinueButton" destination="uFr-X8-9H7" id="iNR-YW-evs"/>
-                        <outlet property="StartButton" destination="E4r-xS-MZw" id="ADX-cD-TwK"/>
-                        <outlet property="continueButtonAction" destination="uFr-X8-9H7" id="jDa-to-q4f"/>
-                        <outlet property="startView" destination="xqX-YH-HTg" id="Qdk-14-m7S"/>
+                        <outlet property="ContinueButton" destination="gz0-u4-OsS" id="XXw-0l-Zqu"/>
+                        <outlet property="StartButton" destination="2Nk-D5-iyg" id="6et-wr-jyH"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NGC-LY-cCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfh-RL-2wy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="715" y="164"/>
+            <point key="canvasLocation" x="756" y="164"/>
         </scene>
         <!--Story View Controller - Kerberos-->
         <scene sceneID="y02-Ky-1ek">

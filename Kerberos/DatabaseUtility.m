@@ -23,11 +23,10 @@ static DatabaseUtility *_database;
 
 - (id)init {
     if ((self = [super init])) {
-        NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"kerberos"
-                                                             ofType:@"db"];
-        
+        NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"kerebos"ofType:@"db"];
+            //NSLog(@"Opened DB");
         if (sqlite3_open([sqLiteDb UTF8String], &_database) != SQLITE_OK) {
-            NSLog(@"Failed to open database!");
+            //NSLog(@"Failed to open database!");
         }
     }
     return self;
@@ -37,6 +36,7 @@ static DatabaseUtility *_database;
     NSMutableArray *retval = [[NSMutableArray alloc] init];
     NSString *query = @"SELECT id, title, description FROM SCENES";
     sqlite3_stmt *statement;
+    //NSLog(@"Created query");
     if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil)
         == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
@@ -46,11 +46,14 @@ static DatabaseUtility *_database;
             char *descriptionChars = (char *) sqlite3_column_text(statement,2);
             NSString *sceneDescription = [[NSString alloc]initWithUTF8String:descriptionChars];
             SceneModel *scene = [[SceneModel alloc]initWithSceneId:sceneID sceneTitle:sceneTitle sceneDescription:sceneDescription];
+            //NSLog(@"Scene ID:%d, Scene Title:%@, SceneDescription:%@", sceneID, sceneTitle, sceneDescription);
             [retval addObject:scene];
             
         }
         sqlite3_finalize(statement);
-    }
+    }//else{
+        //NSLog(@"could not prepare statement: %s\n", sqlite3_errmsg(statement));
+    //}
     return retval;
 }
 
@@ -61,7 +64,43 @@ static DatabaseUtility *_database;
     if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil)
         == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
+            int choiceID = sqlite3_column_int(statement,0);
+            int choiceForScene = sqlite3_column_int(statement,1);
+            int choiceNumber = sqlite3_column_int(statement,2);
+            int destinationSceneID = sqlite3_column_int(statement,3);
+            char *descriptionChars = (char *) sqlite3_column_text(statement,4);
+            int choiceQuickTimeEventType = sqlite3_column_int(statement,5);
+            int choiceMinigameType = sqlite3_column_int(statement,6);
+            int choiceEnding = sqlite3_column_int(statement,7);
+            NSString *choiceDescription = [[NSString alloc]initWithUTF8String:descriptionChars];
+            //            NSLog(@"%@",choiceDescription);
+            ChoiceModel *choice = [[ChoiceModel alloc]initWithChoiceInformation:choiceID choiceForScene:choiceForScene choiceNumber:choiceNumber destinationSceneId:destinationSceneID choiceQuickTimeEventType:choiceQuickTimeEventType choiceMinigameType:choiceMinigameType choiceEnding:choiceEnding choiceDescription:choiceDescription];
+            [retval addObject:choice];
+        }
+        sqlite3_finalize(statement);
+    }
+    return retval;
+}
+
+- (NSArray *)choicesForScene:(int)sceneID{
+    NSMutableArray *retval = [[NSMutableArray alloc] init];
+    NSString *query = [NSString stringWithFormat:@"SELECT id,sceneid,choicenum,destinationid,description,quicktimeevent,minigame,ending FROM CHOICES where sceneid = '%d'",sceneID];
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil)
+        == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            int choiceID = sqlite3_column_int(statement,0);
+            int choiceForScene = sqlite3_column_int(statement,1);
+            int choiceNumber = sqlite3_column_int(statement,2);
+            int destinationSceneID = sqlite3_column_int(statement,3);
+            char *descriptionChars = (char *) sqlite3_column_text(statement,4);
+            int choiceQuickTimeEventType = sqlite3_column_int(statement,5);
+            int choiceMinigameType = sqlite3_column_int(statement,6);
+            int choiceEnding = sqlite3_column_int(statement,7);
+            NSString *choiceDescription = [[NSString alloc]initWithUTF8String:descriptionChars];
             
+            ChoiceModel *choice = [[ChoiceModel alloc]initWithChoiceInformation:choiceID choiceForScene:choiceForScene choiceNumber:choiceNumber destinationSceneId:destinationSceneID choiceQuickTimeEventType:choiceQuickTimeEventType choiceMinigameType:choiceMinigameType choiceEnding:choiceEnding choiceDescription:choiceDescription];
+            [retval addObject:choice];
         }
         sqlite3_finalize(statement);
     }

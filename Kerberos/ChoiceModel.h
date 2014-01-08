@@ -9,23 +9,26 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ChoiceModel : NSObject
+@interface ChoiceModel : NSObject{
+    int _choiceID;
+    int _choiceForScene;
+    int _choiceNumber;
+    int _destinationSceneID;
+    NSString *_choiceDescription;
+    int _choiceQuickTimeEventType;
+    int _choiceMinigameType;
+    int _choiceEnding;
+}
 
-@property (nonatomic, retain) IBOutletCollection(UIButton) NSArray *buttons;
-//Array of buttons to be sent to the scene drawer.
-@property (nonatomic, weak) NSString *choiceText;
-//Text of choice button.
-@property (nonatomic, assign) NSInteger choiceID;
-//ID of Choice button (e.g. 4th choice)
-@property (nonatomic, weak) UIButton *choiceButton;
+@property (nonatomic, assign) int choiceID;
+@property (nonatomic, assign) int choiceForScene;
+@property (nonatomic, assign) int choiceNumber;
+@property (nonatomic, assign) int destinationSceneID;
+@property (nonatomic, assign) int choiceQuickTimeEventType;
+@property (nonatomic, assign) int choiceMinigameType;
+@property (nonatomic, assign) int choiceEnding;
+@property (nonatomic, copy) NSString *choiceDescription;
 
-
-
-- (void) getChoicesForScene;
-//Hit database to get a list of the available choices.
-- (void) setChoicesForButtons;
-//Set the buttons with the previous information.
-- (void) createChoiceButton: (NSString *) choiceText choiceID : (NSInteger) choiceID;
-//Create a choice button.
+-(id)initWithChoiceInformation:(int)choiceID choiceForScene:(int)choiceForScene choiceNumber:(int)choiceNumber destinationSceneId:(int)destinationSceneId choiceQuickTimeEventType:(int)choiceQuickTimeEventType choiceMinigameType:(int)choiceMinigameType choiceEnding:(int)choiceEnding choiceDescription:(NSString *)choiceDescription;
 
 @end

@@ -17,7 +17,9 @@
 
 -(NSArray *)scenes;
 -(NSArray *)choices;
+-(NSArray *)choicesForScene:(int)sceneID;
 
+//Wip below
 -(void)getAllScenes;
 -(void)getAllChoices;
 -(void)findScene:(NSInteger) sceneID;
