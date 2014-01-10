@@ -41,6 +41,8 @@
 
 
 - (IBAction)startButtonAction:(id)sender {
+    SceneDecider *SceneDecider;
+    [SceneDecider moveToScene:0];
 }
 
 - (IBAction)continueButtonAction:(id)sender {
