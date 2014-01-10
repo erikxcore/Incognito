@@ -10,7 +10,7 @@
 
 @implementation Scene
 
-@synthesize view,imageView,sceneDescription;
+@synthesize view,imageView,sceneDescription,choices;
 
 - (id)initWithFrame:(CGRect)frame
 {

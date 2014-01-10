@@ -98,7 +98,6 @@ static DatabaseUtility *_database;
             int choiceMinigameType = sqlite3_column_int(statement,6);
             int choiceEnding = sqlite3_column_int(statement,7);
             NSString *choiceDescription = [[NSString alloc]initWithUTF8String:descriptionChars];
-            
             ChoiceModel *choice = [[ChoiceModel alloc]initWithChoiceInformation:choiceID choiceForScene:choiceForScene choiceNumber:choiceNumber destinationSceneId:destinationSceneID choiceQuickTimeEventType:choiceQuickTimeEventType choiceMinigameType:choiceMinigameType choiceEnding:choiceEnding choiceDescription:choiceDescription];
             [retval addObject:choice];
         }
@@ -107,36 +106,89 @@ static DatabaseUtility *_database;
     return retval;
 }
 
+-(NSArray *)sceneByID:(int)sceneID{
+    NSMutableArray *retval = [[NSMutableArray alloc] init];
+    NSString *query = [NSString stringWithFormat:@"SELECT id, title, description FROM SCENES where sceneid = '%d'",sceneID];
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil)
+        == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            int sceneID = sqlite3_column_int(statement,0);
+            char *titleChars = (char *) sqlite3_column_text(statement,1);
+            NSString *sceneTitle = [[NSString alloc]initWithUTF8String:titleChars];
+            char *descriptionChars = (char *) sqlite3_column_text(statement,2);
+            NSString *sceneDescription = [[NSString alloc]initWithUTF8String:descriptionChars];
+            SceneModel *scene = [[SceneModel alloc]initWithSceneId:sceneID sceneTitle:sceneTitle sceneDescription:sceneDescription];
+            [retval addObject:scene];
+            
+        }
+        sqlite3_finalize(statement);
+    }
+    return retval;
+}
+
+-(BOOL)isSceneQTE:(int)sceneID{
+    BOOL sceneQTEStatus = false;
+    NSString *query = [NSString stringWithFormat:@"SELECT quicktimeevent FROM SCENES where sceneid = '%d'",sceneID];
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil)
+        == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            int sceneQTE = sqlite3_column_int(statement,0);
+            if(sceneQTE > 0){ //different types of QTE
+                sceneQTEStatus = true;
+            }
+        }
+        sqlite3_finalize(statement);
+    }
+    return sceneQTEStatus;
+}
+
+-(BOOL)isSceneEnding:(int)sceneID{
+    BOOL sceneEndingStatus = false;
+    NSString *query = [NSString stringWithFormat:@"SELECT ending FROM SCENES where sceneid = '%d'",sceneID];
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil)
+        == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            int sceneEnding = sqlite3_column_int(statement,0);
+            if(sceneEnding > 0){ //different endings
+                sceneEndingStatus = true;
+            }
+        }
+        sqlite3_finalize(statement);
+    }
+    return sceneEndingStatus;
+}
+
+-(BOOL)isSceneMinigame:(int)sceneID{
+    BOOL sceneMinigameStatus = false;
+    NSString *query = [NSString stringWithFormat:@"SELECT minigame FROM SCENES where sceneid = '%d'",sceneID];
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil)
+        == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            int sceneMinigame = sqlite3_column_int(statement,0);
+            if(sceneMinigame > 0){ //different types of  minigames
+                sceneMinigameStatus = true;
+            }
+        }
+        sqlite3_finalize(statement);
+    }
+    return sceneMinigameStatus;
+}
+
 - (void)dealloc {
     sqlite3_close(_database);
 }
 
--(void)findScene:(NSInteger)sceneID{
-    
+
+-(void)saveGameAt:(int)sceneID{
+    /*Implement later*/
 }
 
--(void)findChoices:(NSInteger)sceneID{
-    
-}
-
--(BOOL)doesSaveExist{
+-(BOOL)doesSaveExist:(int)sceneID{
     return NO;
-}
-
--(void)findSave{
-    
-}
-
--(void)saveGameAt:(NSInteger)sceneID{
-    
-}
-
--(void)getAllChoices{
-    
-}
-
--(void)getAllScenes{
-    
 }
 
 @end

@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SceneModel.h"
+#import "Scene.h"
+#import "ChoiceModel.h"
 
 @interface SceneDrawer : NSObject
+
+@property (nonatomic, retain) SceneModel *sceneInformation;
+@property (nonatomic, retain) Scene *theScene;
+
+-(void)drawScene:(int)sceneID;
 
 @end

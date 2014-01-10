@@ -18,16 +18,13 @@
 -(NSArray *)scenes;
 -(NSArray *)choices;
 -(NSArray *)choicesForScene:(int)sceneID;
+-(NSArray *)sceneByID:(int)sceneID;
 
 //Wip below
--(void)getAllScenes;
--(void)getAllChoices;
--(void)findScene:(NSInteger) sceneID;
-//Should return SceneModel
--(void)findChoices:(NSInteger) sceneID;
-//Should return ChoiceModel
--(BOOL)doesSaveExist;
--(void)findSave;
--(void)saveGameAt:(NSInteger) sceneID;
+-(BOOL)doesSaveExist:(int)sceneID;
+-(void)saveGameAt:(int) sceneID;
+-(BOOL)isSceneQTE:(int)sceneID;
+-(BOOL)isSceneEnding:(int)sceneID;
+-(BOOL)isSceneMinigame:(int)sceneID;
 
 @end
